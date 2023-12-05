@@ -11,6 +11,7 @@ import org.testng.Assert;
 
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class M03_Odev1 extends TestBase {
 
@@ -32,6 +33,7 @@ driver.navigate().to("https://automationexercise.com");
         JavascriptUtils.scrollDownByJS(driver);
 //        5. Verify text 'SUBSCRIPTION'
         WebElement subscription = driver.findElement(By.xpath("//h2[text()='Subscription']"));
+
      //   softAssert.assertEquals(subscription.getText(), "SUBSCRIPTION","Subscription text does not match");
       //  softAssert.assertEquals(subscription.getText(),"SUBSCRIPTION","Subscription text does not match");
 //        6. Enter email address in input and click arrow button
