@@ -34,7 +34,7 @@ public class M01_odev {
     @Test(dependsOnMethods = "facebook01")
     public void google02() throws Exception {
         driver.get("https://google.com");
-        System.out.println("test01");
+
         Thread.sleep(2000);
         System.out.println("test02");
 
@@ -43,7 +43,7 @@ public class M01_odev {
     @Test(dependsOnMethods = {"facebook01", "google02"})
     public void amazon03() throws Exception {
         driver.get("https://amazon.com");
-        System.out.println("test01");
+
         Thread.sleep(2000);
         System.out.println("test03");
 

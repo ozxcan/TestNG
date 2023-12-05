@@ -9,15 +9,15 @@ public class C03_DependsOnMethods {
 - Bir parametrede bir method veya birden çok method iletilebilir.
   */
      @Test
-     public void loginTest() throws Exception {
+     public void loginTest() {
          System.out.println("Login Test");
      }
     @Test(dependsOnMethods = "loginTest")
-    public void homepageTest() throws Exception {
+    public void homepageTest() {
         System.out.println("Homepage Test");
     }
-    @Test(dependsOnMethods = {"loginTest","homepage"})
-    public void smokeTest() throws Exception {
+    @Test(dependsOnMethods = {"loginTest","homepageTest"})
+    public void smokeTest()  {
         System.out.println("smokeTest");
     }
 
