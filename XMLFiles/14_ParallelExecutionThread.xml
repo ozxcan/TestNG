@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Parallel Test" verbose="1" parallel="methods" thread-count="2"> <!-- Testing Adı -->
+
+    <test name="Annotations Test" >
+        <classes>
+            <class name="clarusway.tests.C21_ParallelTestThread" /> <!-- Çalıştırılacak classlar belirtilir -->
+        </classes>
+    </test>
+
+</suite>

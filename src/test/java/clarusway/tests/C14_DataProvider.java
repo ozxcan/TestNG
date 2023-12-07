@@ -30,7 +30,7 @@ public class C14_DataProvider extends TestBase {
         Thread.sleep(2000);
         driver.findElement(By.name("username")).sendKeys(username);
         Thread.sleep(2000);
-        driver.findElement(By.name("password")).sendKeys(username);
+        driver.findElement(By.name("password")).sendKeys(password);
         // driver.findElement(By.name("submitbutton")).click();
 
         driver.findElement(By.xpath("//input[@value='submit']")).click();

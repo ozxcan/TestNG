@@ -30,4 +30,11 @@ public class DataProviderUtils {
 
         return excelUtils.getDataArrayWithoutFirstRow();
     }
+    @DataProvider (parallel = true)
+    public Object [][] excelTitleNote(){
+
+        ExcelUtils excelUtils = new ExcelUtils("resources/username_password.xlsx", "Sheet2");
+
+        return excelUtils.getDataArrayWithoutFirstRow();
+    }
 }
