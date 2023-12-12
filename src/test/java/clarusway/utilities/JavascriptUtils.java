@@ -40,7 +40,7 @@ public class JavascriptUtils {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) driver);
         javascriptExecutor.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
         try {
-            Thread.sleep(5000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

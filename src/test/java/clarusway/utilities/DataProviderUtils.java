@@ -30,7 +30,7 @@ public class DataProviderUtils {
 
         return excelUtils.getDataArrayWithoutFirstRow();
     }
-    @DataProvider (parallel = true)
+    @DataProvider (parallel = true)//true unutma yoksa paralel olmaz
     public Object [][] excelTitleNote(){
 
         ExcelUtils excelUtils = new ExcelUtils("resources/username_password.xlsx", "Sheet2");

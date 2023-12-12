@@ -3,9 +3,11 @@ package clarusway.Mentoring;
 import clarusway.utilities.DataProviderUtils;
 import clarusway.utilities.ParameterBrowserTestBase;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class Odev1Hoca extends ParameterBrowserTestBase {
+public class Odev1Hoca  {
     /*
     Go to https://testpages.eviltester.com/styled/apps/notes/simplenotes.html
     Add 10 notes using data provider with excel
@@ -14,12 +16,13 @@ public class Odev1Hoca extends ParameterBrowserTestBase {
      */
     @Test(dataProvider = "excelTitleNote",dataProviderClass = DataProviderUtils.class)
     public void dataProviderExcelTest(String title,String note) throws Exception {
+        WebDriver driver = new ChromeDriver();
         driver.get("https://testpages.eviltester.com/styled/apps/notes/simplenotes.html");
 
         driver.findElement(By.id("note-title-input")).sendKeys(title);
         driver.findElement(By.id("note-details-input")).sendKeys(note);
         driver.findElement(By.id("add-note")).click();
-
+driver.quit();
 
     }
 
