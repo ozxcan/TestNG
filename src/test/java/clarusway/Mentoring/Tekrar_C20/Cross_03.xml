@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="3">
+    <test verbose="2" preserve-order="true"
+          name="Parallel Test">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="clarusway.Mentoring.Tekrar_C20.Cross_01P">
+
+                <methods>
+                    <include name="homework"/>
+<!--Ayni browsera 1 den fazla metod yüklenildiginde hata veriyor-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Parallel Test2">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="clarusway.Mentoring.Tekrar_C20.Cross_02P">
+                <methods>
+                    <!--Ayni browsera 1 den fazla metod yüklenildiginde hata veriyor-->
+                    <include name="cross01"/>
+                    <include name="cross02"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

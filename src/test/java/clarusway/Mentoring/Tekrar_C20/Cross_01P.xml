@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+    <test verbose="2" preserve-order="true"
+          name="Paralel Test">
+<!--        <parameter name="browser" value="chrome"></parameter>          Bunu yazmaya gerek yok optional olarak chrome var-->
+        <classes>
+            <class name="clarusway.Mentoring.Tekrar_C20.Cross_01P">
+                <methods>
+                    <include name="homework"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Paralel Test2">
+        <!--        <parameter name="browser" value="chrome"></parameter>          Bunu yazmaya gerek yok optional olarak chrome var-->
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="clarusway.Mentoring.Tekrar_C20.Cross_02P">
+                <methods>
+                    <include name="cross01"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Paralel Test3">
+        <!--        <parameter name="browser" value="chrome"></parameter>          Bunu yazmaya gerek yok optional olarak chrome var-->
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="clarusway.Mentoring.Tekrar_C20.Cross_02P">
+                <methods>
+                    <include name="cross02"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

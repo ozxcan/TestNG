@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" >
+    <test verbose="2" preserve-order="true"
+          name="firefox Test">
+        <classes>
+            <class name="clarusway.Mentoring.Odev1Hoca">
+                <parameter name="browser" value="firefox"></parameter>
+                <methods>
+                    <include name="dataProviderExcelTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="edge Test">
+        <classes>
+            <class name="clarusway.Mentoring.Odev1Hoca">
+                <parameter name="browser" value="edge"></parameter>
+                <methods>
+                    <include name="dataProviderExcelTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="chrome Test">
+        <classes>
+            <class name="clarusway.Mentoring.Odev1Hoca">
+                <parameter name="browser" value="chrome"></parameter>
+                <methods>
+                    <include name="dataProviderExcelTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
